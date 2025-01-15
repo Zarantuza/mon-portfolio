@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 3D Généralist</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./src/main.js"></script>
+    <link rel="stylesheet" crossorigin href="./src/style.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="header-content">
+            <a href="https://www.linkedin.com/in/leo-peyre-costa/" target="_blank" class="header-link">LinkedIn</a>
+            <a href="/docs/leo-peyre-costa-cv.pdf" target="_blank" class="header-link">CV</a>
+        </div>
+    </header>
+    
+    <!-- Section Vidéo -->
+    <section class="video-section">
+        <div class="video-overlay">
+            <video autoplay muted loop playsinline>
+                <source src="/images/reel-2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo HTML5.
+            </video>
+            <div class="overlay-blocker"></div>
+        </div>
+        <!-- Texte animé -->
+        <div class="animated-text-container">
+            <span class="animated-text" id="animated-text"></span>
+        </div>
+        <!-- Flèche dynamique -->
+        <div class="scroll-arrow" id="scroll-arrow">↓</div>
+    </section>
+      
+    <!-- Section Mosaïque -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery">
+            <!-- Projet 1: Vanités -->
+            <div class="gallery-item" data-project="Vanités" data-description="Timelapse video"
+                 data-gallery='["/images/fleur.png","/images/fleur2.png", "/images/fleur.mp4"]'>
+                <img src="/images/fleur.png" alt="Vanités - Timelapse">
+                <div class="overlay">
+                    <h3>Vanités</h3>
+                    <p>Vidéo créée sous Houdini, en style timelapse, intégrant des éléments 3D comme un crâne et un sablier. 
+                    La simulation montre une fleur qui fane, mettant en œuvre des shaders procéduraux pour le réalisme et une animation de dégradation progressive.</p>
+                </div>
+            </div>
+
+            <!-- Projet 2: Géode -->
+            <div class="gallery-item" data-project="Géode" data-description="Procedural system"
+                 data-gallery='["/images/geode1.png", "/images/geode3.png"]'>
+                <img src="/images/geode1.png" alt="Géode - Procedural System">
+                <div class="overlay">
+                    <h3>Géode</h3>
+                    <p>Géometrie générée à l'aide d'un système procédural dans Houdini. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Projet 3: Défilé avec Mannequin -->
+            <div class="gallery-item" data-project="Défilé avec Mannequin" data-description="Video showcase"
+                 data-gallery='["/images/defile.mp4"]'>
+                <img src="/images/defile.png" alt="Défilé avec Mannequin">
+                <div class="overlay">
+                    <h3>Défilé avec Mannequin</h3>
+                    <p>Vidéo créée sous Houdini avec simulation de tissus et particules. Un mannequin en bois défile dans un environnement naturel, vêtu d'une robe composée de fleurs générées procéduralement. Les lucioles utilisent un système de particules pour simuler des flashes lumineux.</p>
+                </div>
+            </div>
+
+            <!-- Projet 4: Robot -->
+            <div class="gallery-item" data-project="Robot" data-description="Tilt-shift video"
+                 data-gallery='["/images/Export-final-robot-light.mp4"]'>
+                <img src="/images/robot.png" alt="Robot">
+                <div class="overlay">
+                    <h3>Robot</h3>
+                    <p>Vidéo réalisée sous Houdini avec une mise en scène de type tilt-shift. Le robot-jouet a été modélisé, animé et texturé. Simulation de particules et RBD.</p>
+                </div>
+            </div>
+
+            <!-- Projet 5: Réveil -->
+            <div class="gallery-item" data-project="Réveil" data-description="Lighting experiment"
+                 data-gallery='["/images/reveil2.png","/images/reveil.png"]'>
+                <img src="/images/reveil2.png" alt="Réveil">
+                <div class="overlay">
+                    <h3>Réveil</h3>
+                    <p>Image issue d'un projet conçu dans Houdini. L'accent est mis sur les paramètres d'éclairage et de matériaux PBR pour recréer une scène photoréaliste.</p>
+                </div>
+            </div>
+
+            <!-- Projet 6: Mauvais Rêve -->
+            <div class="gallery-item" data-project="Mauvais Rêve" data-description="Video narrative"
+                 data-gallery='["/images/tente-final-light.mp4"]'>
+                <img src="/images/tente.jpg" alt="Mauvais Rêve">
+                <div class="overlay">
+                    <h3>Mauvais Rêve</h3>
+                    <p>Vidéo narrative réalisée dans Houdini. La scène comprend un feu de camp animé avec simulation de fumée et particules, ainsi qu'une tente déchirée par une épée utilisant des simulations RBD et vellum pour la destruction réaliste des tissus.</p>
+                </div>
+            </div>
+
+            <!-- Projet 7: Brasero -->
+            <div class="gallery-item" data-project="Brasero" data-description="Video tracking"
+                 data-gallery='["/images/tracking.mp4"]'>
+                <img src="/images/tracking2.png" alt="Brasero">
+                <div class="overlay">
+                    <h3>Brasero</h3>
+                    <p>Vidéo utilisant le suivi de mouvement pour intégrer un brasero animé dans une séquence réelle. Les simulations de flammes et de lumière volumétrique ont été réalisées sous Houdini, avec un alignement précis grâce au tracking caméra (Syntheye).</p>
+                </div>
+            </div>
+
+            <!-- Projet 8: Plantes en Croissance -->
+            <div class="gallery-item" data-project="Plantes en Croissance" data-description="Procedural animation"
+                 data-gallery='["/images/plants.mp4"]'>
+                <img src="/images/plants.png" alt="Plantes en Croissance">
+                <div class="overlay">
+                    <h3>Plantes en Croissance</h3>
+                    <p>Animation procédurale réalisée sous Houdini. Le projet montre la croissance de plantes et de champignons, avec des systèmes de nœuds pour contrôler les étapes de développement et des simulations pour le mouvement des végétaux.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flèche pour remonter -->
+    </section>
+
+    <div class="scroll-arrow" id="scroll-to-top">↑</div>
+</body>
+</html>
